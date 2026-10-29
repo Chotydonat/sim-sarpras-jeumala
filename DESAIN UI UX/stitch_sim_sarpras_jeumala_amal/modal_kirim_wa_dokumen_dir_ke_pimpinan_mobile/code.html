@@ -1,0 +1,444 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "inverse-surface": "#283044",
+        "on-primary": "#ffffff",
+        "surface-container-lowest": "#ffffff",
+        "inverse-primary": "#93ccff",
+        "on-secondary-fixed": "#001d32",
+        "surface-container-low": "#f2f3ff",
+        "on-surface-variant": "#3f4850",
+        "surface-container": "#eaedff",
+        "on-secondary": "#ffffff",
+        "primary": "#006194",
+        "background": "#faf8ff",
+        "whatsapp-teal": "#075E54",
+        "accent-gold-bg": "#FEF3C7",
+        "accent-emergency-dark": "#991B1B",
+        "on-tertiary-fixed-variant": "#0039b5",
+        "on-primary-fixed": "#001d31",
+        "inverse-on-surface": "#eef0ff",
+        "accent-emerald-dark": "#166534",
+        "surface-soft": "#E8F2FE",
+        "surface-bright": "#faf8ff",
+        "on-tertiary-fixed": "#001551",
+        "accent-sky-light": "#38BDF8",
+        "surface-hover": "#F8FAFC",
+        "tertiary-container": "#4069f2",
+        "text-muted": "#64748B",
+        "surface-dim": "#d2d9f4",
+        "error-container": "#ffdad6",
+        "outline": "#707881",
+        "surface-white": "#FFFFFF",
+        "accent-gold": "#F59E0B",
+        "navy-deep-start": "#0B192C",
+        "on-surface": "#131b2e",
+        "surface": "#faf8ff",
+        "on-primary-container": "#fdfcff",
+        "navy-deep-end": "#0F2847",
+        "secondary-fixed": "#cde5ff",
+        "on-error-container": "#93000a",
+        "primary-fixed-dim": "#93ccff",
+        "on-tertiary": "#ffffff",
+        "surface-tint": "#006398",
+        "border-subtle": "#E2E8F0",
+        "accent-emerald": "#10B981",
+        "surface-container-highest": "#dae2fd",
+        "secondary-fixed-dim": "#94ccff",
+        "on-secondary-fixed-variant": "#004b74",
+        "accent-emerald-bg": "#DCFCE7",
+        "surface-variant": "#dae2fd",
+        "secondary": "#006399",
+        "outline-variant": "#bfc7d2",
+        "error": "#ba1a1a",
+        "tertiary-fixed-dim": "#b7c4ff",
+        "on-primary-fixed-variant": "#004b73",
+        "surface-container-high": "#e2e7ff",
+        "canvas-bg": "#F0F7FF",
+        "on-secondary-container": "#004f7b",
+        "whatsapp-bubble": "#DCF8C6",
+        "accent-emergency-bg": "#FEE2E2",
+        "tertiary-fixed": "#dce1ff",
+        "on-tertiary-container": "#fffbff",
+        "primary-fixed": "#cce5ff",
+        "whatsapp-green": "#25D366",
+        "accent-emergency": "#EF4444",
+        "tertiary": "#1d4ed8",
+        "secondary-container": "#7bc2ff",
+        "on-error": "#ffffff",
+        "on-background": "#131b2e",
+        "canvas-sky-start": "#E0F2FE",
+        "primary-container": "#007bb9"
+      },
+      "borderRadius": {
+        "DEFAULT": "1rem",
+        "lg": "2rem",
+        "xl": "3rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-2xl": "3rem",
+        "margin-mobile": "1rem",
+        "space-xl": "2rem",
+        "space-sm": "0.5rem",
+        "margin": "1.75rem",
+        "gutter": "1.5rem",
+        "space-lg": "1.5rem",
+        "space-md": "1rem",
+        "space-xs": "0.25rem",
+        "gutter-mobile": "1rem"
+      },
+      "fontFamily": {
+        "body-md": ["Plus Jakarta Sans"],
+        "body-lg": ["Plus Jakarta Sans"],
+        "label-table-head": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"],
+        "headline-sm": ["Plus Jakarta Sans"],
+        "display-hero": ["Plus Jakarta Sans"],
+        "label-meta": ["Plus Jakarta Sans"],
+        "badge-mini": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"],
+        "display-hero-mobile": ["Plus Jakarta Sans"],
+        "display-stat": ["Plus Jakarta Sans"],
+        "body-sm": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+        "label-table-head": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+        "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+        "display-hero": ["46px", {"lineHeight": "54px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+        "label-meta": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+        "badge-mini": ["11px", {"lineHeight": "14px", "fontWeight": "700"}],
+        "headline-lg": ["28px", {"lineHeight": "36px", "fontWeight": "800"}],
+        "display-hero-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+        "display-stat": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+        "body-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}]
+      }
+    }
+  }
+}</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 inset-x-0 z-50 bg-surface-white/85 backdrop-blur-xl shadow-[0_4px_20px_rgba(2,132,199,0.06)] pt-safe"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary shadow-[0_2px_8px_rgba(0,97,148,0.12)]"><span class="material-symbols-outlined text-[22px]">account_balance</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">SIM-SARPRAS</span><span class="font-badge-mini text-badge-mini text-text-muted leading-tight">MTs Jeumala Amal</span></div></div><div class="flex items-center gap-space-sm"><button class="min-h-[44px] px-3 py-1.5 rounded-full bg-accent-emergency-bg text-accent-emergency flex items-center gap-1.5 shadow-[0_4px_12px_rgba(239,68,68,0.18)] active:scale-95 transition-transform" type="button"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-emergency opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-accent-emergency"></span></span><span class="font-badge-mini text-badge-mini font-bold uppercase tracking-wider">SOS</span></button><a class="min-h-[44px] min-w-[44px] flex items-center justify-center" data-path="profil-wali-kelas" href="#"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_8px_rgba(0,97,148,0.25)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full relative">
+<!-- Underneath Backdrop: DIR Document Inactive Canvas Layer -->
+<div aria-hidden="true" class="px-margin-mobile pt-space-md space-y-space-md opacity-40 blur-[1px] select-none pointer-events-none">
+<div class="bg-surface-white rounded-lg p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-soft flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">description</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Daftar Inventaris Ruang</h3>
+<p class="font-label-meta text-label-meta text-text-muted">Kelas VIII-3 • Gedung Putra Lt. 2</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-accent-emerald-bg text-accent-emerald-dark font-badge-mini text-badge-mini">
+          Terverifikasi
+        </span>
+</div>
+<div class="h-28 bg-surface-container-low rounded-DEFAULT flex items-center justify-center">
+<span class="font-label-meta text-label-meta text-text-muted">Pratinjau Matriks Sarana Madrasah</span>
+</div>
+</div>
+</div>
+<!-- Modal Dimmed Backdrop -->
+<div class="fixed inset-0 z-40 bg-navy-deep-start/50 backdrop-blur-[6px] transition-opacity"></div>
+<!-- Luminous Bottom-Sheet Modal Container -->
+<div class="fixed inset-x-0 bottom-0 z-50 max-w-[520px] mx-auto w-full max-h-[92vh] flex flex-col bg-surface-white rounded-t-xl shadow-[0_-12px_40px_rgba(2,132,199,0.18)] pb-safe overflow-hidden animate-in slide-in-from-bottom duration-300">
+<!-- Drag Handle & Modal Header -->
+<div class="sticky top-0 bg-surface-white/95 backdrop-blur-md px-margin-mobile pt-3 pb-space-sm flex flex-col z-20 shadow-[0_2px_10px_rgba(2,132,199,0.04)]">
+<div class="w-12 h-1.5 rounded-full bg-outline-variant/60 mx-auto mb-3"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-whatsapp-bubble flex items-center justify-center text-whatsapp-teal shadow-[0_2px_8px_rgba(37,211,102,0.25)]">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Kirim Dokumen DIR</h2>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-badge-mini text-badge-mini">
+                Resmi
+              </span>
+</div>
+<p class="font-label-meta text-label-meta text-text-muted">Kelas VIII-3 • MTs Jeumala Amal</p>
+</div>
+</div>
+<button aria-label="Tutup Dialog" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-colors active:scale-95" id="close-modal-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- Scrollable Body Content -->
+<div class="overflow-y-auto px-margin-mobile py-space-sm space-y-space-md text-on-surface overscroll-contain"><div class="bg-accent-emerald-bg/80 border border-accent-emerald/30 rounded-lg p-3.5 shadow-sm space-y-2.5 animate-in slide-in-from-bottom duration-300"><div class="flex items-start justify-between"><div class="flex items-center gap-2.5"><div class="w-9 h-9 rounded-full bg-whatsapp-green text-on-primary flex items-center justify-center shrink-0 shadow-[0_2px_8px_rgba(37,211,102,0.35)]"><span class="material-symbols-outlined text-[20px]">done_all</span></div><div><div class="flex items-center gap-1.5"><span class="font-headline-sm text-body-md font-bold text-accent-emerald-dark">Berhasil Terkirim via WhatsApp</span><span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span></div><p class="font-label-meta text-label-meta text-accent-emerald-dark/90 flex items-center gap-1 mt-0.5"><span class="material-symbols-outlined text-[13px]">schedule</span>Terkirim hari ini, pukul 11:45 WIB</p></div></div><span class="px-2 py-0.5 rounded-full bg-accent-emerald text-on-primary font-badge-mini text-badge-mini font-bold flex items-center gap-0.5 shadow-sm"><span class="material-symbols-outlined text-[11px]">check</span>Sukses</span></div><div class="bg-surface-white/90 rounded-DEFAULT p-2.5 space-y-2 border border-accent-emerald/20 text-body-sm"><div class="flex items-center justify-between text-text-muted font-badge-mini text-badge-mini pb-1.5 border-b border-border-subtle"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px] text-whatsapp-teal">receipt_long</span>Log Receipt API: <span class="font-mono font-bold text-on-surface">WA-MTs-2026-89410</span></span><span class="text-accent-emerald-dark font-bold flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px] text-primary">done_all</span>Dibaca (2/2)</span></div><div class="space-y-1.5"><div class="flex items-center justify-between"><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-accent-emerald"></span><span class="font-body-md text-on-surface font-semibold text-[13px]">Drs. Tgk. H. Hamdani</span><span class="font-badge-mini text-[10px] text-text-muted">(Kepala MTs)</span></div><span class="text-primary font-mono text-[11px] flex items-center gap-0.5 font-bold"><span class="material-symbols-outlined text-[13px]">done_all</span>11:45 WIB</span></div><div class="flex items-center justify-between"><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-accent-emerald"></span><span class="font-body-md text-on-surface font-semibold text-[13px]">Ust. Bukhari</span><span class="font-badge-mini text-[10px] text-text-muted">(Koord. Sarpras)</span></div><span class="text-primary font-mono text-[11px] flex items-center gap-0.5 font-bold"><span class="material-symbols-outlined text-[13px]">done_all</span>11:45 WIB</span></div></div><div class="pt-1 flex items-center justify-between text-[11px] text-text-muted"><span class="truncate">Dokumen: DIR_RESMI_KELAS_VIII-3_2026.pdf (340 KB)</span><span class="text-accent-emerald-dark font-bold shrink-0">HMAC Valid</span></div></div></div>
+<!-- 1. Document Attachment Preview Card (Origami Elevation) -->
+<div class="bg-canvas-bg rounded-lg p-space-md shadow-[0_4px_16px_rgba(2,132,199,0.08)] relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-surface-soft/60 rounded-full pointer-events-none"></div>
+<div class="flex items-start gap-3 relative z-10">
+<!-- Thumbnail Graphic & HMAC Stamp -->
+<div class="relative shrink-0">
+<div class="w-14 h-16 bg-surface-white rounded-DEFAULT shadow-[0_2px_8px_rgba(0,0,0,0.06)] flex flex-col items-center justify-center p-1.5 text-center">
+<div class="w-full h-1.5 bg-accent-emergency rounded-full mb-1"></div>
+<span class="material-symbols-outlined text-accent-emergency text-[26px]">picture_as_pdf</span>
+<span class="font-badge-mini text-badge-mini text-accent-emergency font-bold tracking-tight">PDF</span>
+</div>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 bg-accent-emerald text-on-primary rounded-full flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<h4 class="font-body-md text-body-md font-bold text-on-surface truncate">DIR_RESMI_KELAS_VIII-3_2026.pdf</h4>
+</div>
+<div class="flex items-center gap-2 mt-0.5 text-text-muted font-label-meta text-label-meta">
+<span class="">340 KB</span>
+<span class="">•</span>
+<span class="text-accent-emerald-dark font-semibold">HMAC SHA-256 Valid</span>
+</div>
+<div class="mt-2 flex items-center gap-1.5 bg-surface-white/80 rounded-full px-2 py-1 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[15px]">draw</span>
+<p class="font-badge-mini text-badge-mini text-on-surface truncate">
+                Ttd Digital: <span class="font-bold">Ust. Ahmad Fauzi, S.Pd</span> (Wali Kelas)
+              </p>
+</div>
+</div>
+</div>
+<!-- Embedded Metadata Bar -->
+<div class="mt-3 pt-2.5 flex items-center justify-between text-text-muted font-badge-mini text-badge-mini bg-surface-white/50 px-2.5 py-1.5 rounded-DEFAULT">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">qr_code_2</span>
+            UUID: <span class="font-mono text-on-surface">JA-SAR-2026-VIII3</span>
+</span>
+<span class="text-accent-emerald-dark font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">lock</span> Siap Kirim
+          </span>
+</div>
+</div>
+<!-- 2. Destination Selector (Interactive Radio/Checkbox Pill List) -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<label class="font-label-table-head text-label-table-head text-on-surface uppercase tracking-wider">
+            Tujuan Pengiriman Pimpinan
+          </label>
+<span class="font-badge-mini text-badge-mini px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-bold" id="selected-counter-badge">
+            2 Penerima Dipilih
+          </span>
+</div>
+<div class="space-y-2" id="recipient-list">
+<!-- Recipient 1: Kepala MTs -->
+<label class="recipient-option flex items-center justify-between p-3 rounded-DEFAULT bg-surface-container-low hover:bg-surface-soft cursor-pointer transition-all active:scale-[0.99] select-none" data-target="kamad">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">school</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-body-md text-body-md font-bold text-on-surface truncate">Drs. Tgk. H. Hamdani</span>
+<span class="px-2 py-0.2 rounded-full bg-accent-gold-bg text-accent-gold font-badge-mini text-badge-mini">
+                    Kepala MTs
+                  </span>
+</div>
+<p class="font-label-meta text-label-meta text-text-muted mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-whatsapp-teal">call</span>
+                  WA: 0811-6821-xxxx
+                </p>
+</div>
+</div>
+<div class="relative flex items-center pl-2">
+<input checked="" class="recipient-checkbox w-5 h-5 rounded-full accent-primary cursor-pointer" type="checkbox">
+</div>
+</label>
+<!-- Recipient 2: Koordinator Sarpras -->
+<label class="recipient-option flex items-center justify-between p-3 rounded-DEFAULT bg-surface-container-low hover:bg-surface-soft cursor-pointer transition-all active:scale-[0.99] select-none" data-target="sarpras">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">build_circle</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-body-md text-body-md font-bold text-on-surface truncate">Ust. Bukhari</span>
+<span class="px-2 py-0.2 rounded-full bg-primary/10 text-primary font-badge-mini text-badge-mini">
+                    Koord. Sarpras
+                  </span>
+</div>
+<p class="font-label-meta text-label-meta text-text-muted mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-whatsapp-teal">call</span>
+                  WA: 0812-6901-xxxx
+                </p>
+</div>
+</div>
+<div class="relative flex items-center pl-2">
+<input checked="" class="recipient-checkbox w-5 h-5 rounded-full accent-primary cursor-pointer" type="checkbox">
+</div>
+</label>
+<!-- Recipient 3: Grup WhatsApp Dewan Guru (Optional) -->
+<label class="recipient-option flex items-center justify-between p-3 rounded-DEFAULT bg-surface-white hover:bg-surface-container-low cursor-pointer transition-all active:scale-[0.99] select-none shadow-[0_1px_4px_rgba(0,0,0,0.04)]" data-target="group">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-text-muted shrink-0">
+<span class="material-symbols-outlined text-[22px]">groups</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-body-md text-body-md font-bold text-on-surface truncate">Grup Dewan Guru &amp; Wali Kelas</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant font-badge-mini text-badge-mini">
+                    Opsional
+                  </span>
+</div>
+<p class="font-label-meta text-label-meta text-text-muted mt-0.5">
+                  Arsip tembusan rapat berkala
+                </p>
+</div>
+</div>
+<div class="relative flex items-center pl-2">
+<input class="recipient-checkbox w-5 h-5 rounded-full accent-primary cursor-pointer" type="checkbox">
+</div>
+</label>
+</div>
+</div>
+<!-- 3. WhatsApp Message Preview Bubble (Monospace styled) -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-table-head text-label-table-head text-on-surface uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-whatsapp-teal">chat_bubble</span>
+            Format Pesan Resmi Tergenerasi
+          </label>
+<span class="font-badge-mini text-badge-mini text-text-muted">Template Otomatis</span>
+</div>
+<div class="bg-whatsapp-teal/5 p-3 rounded-DEFAULT relative">
+<!-- WhatsApp Bubble Graphic -->
+<div class="bg-whatsapp-bubble rounded-lg p-3 text-on-surface shadow-[0_2px_6px_rgba(0,0,0,0.05)] relative">
+<div class="font-mono text-body-sm space-y-2 leading-relaxed">
+<p class="font-bold text-whatsapp-teal">Assalamu'alaikum Wr. Wb.</p>
+<p class="">Kepada Yth. <strong>Kepala MTs Jeumala Amal / Koordinator Sarpras</strong>,</p>
+<p class="">Berikut disampaikan <strong>Dokumen Berita Acara Daftar Inventaris Ruang (DIR)</strong> Semester Ganjil TA 2026/2027:</p>
+<div class="bg-surface-white/60 p-2 rounded-DEFAULT space-y-1">
+<p class="">• <strong>Ruangan:</strong> Kelas VIII-3 (Gedung Putra Lt. 2)</p>
+<p class="">• <strong>Wali Kelas:</strong> Ust. Ahmad Fauzi, S.Pd</p>
+<p class="">• <strong>Total Sarana:</strong> 42 Unit (<span class="text-accent-emerald-dark font-bold">39 Baik</span>, <span class="text-accent-gold font-bold">2 Servis</span>, <span class="text-accent-emergency-dark font-bold">1 Rusak Berat</span>)</p>
+<p class="text-accent-emergency-dark text-[12px] pl-2">→ Kipas Angin Regency #FIX-023 (Mati total)</p>
+</div>
+<p class="break-all text-primary text-[12px]">
+                • <strong>Unduh PDF Resmi:</strong> <span class="underline">https://simsarpras.jeumala.sch.id/dir/pdf/DIR-VIII3-2026.pdf</span>
+</p>
+<div class="flex items-center justify-between text-text-muted text-[11px] pt-1">
+<span class="truncate">Hash: 9f8a4e21...3d90cb47e</span>
+<span class="flex items-center gap-0.5 text-whatsapp-teal font-sans">
+<span class="">10:42</span>
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+</span>
+</div>
+<p class="font-bold text-whatsapp-teal">Wassalamu'alaikum Wr. Wb.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. Quick Customization / Catatan Tambahan -->
+<div class="space-y-1.5">
+<label class="font-label-meta text-label-meta font-bold text-on-surface flex items-center justify-between" for="extra-note-input">
+<span class="">Catatan Tambahan untuk Pimpinan (Opsional)</span>
+<span class="font-badge-mini text-badge-mini text-text-muted font-normal">Maks. 140 karakter</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 px-3.5 rounded-DEFAULT bg-surface-container-low text-on-surface placeholder:text-text-muted text-body-md focus:bg-surface-white focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,97,148,0.25)] transition-all" id="extra-note-input" maxlength="140" placeholder="Contoh: Mohon penggantian kipas angin jelang gladi bersih asesmen..." type="text">
+<div class="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Footer Actions (Pill CTAs) -->
+<div class="sticky bottom-0 bg-surface-white/95 backdrop-blur-md px-margin-mobile pt-3 pb-3 space-y-2 shadow-[0_-4px_16px_rgba(0,0,0,0.04)]"><button class="w-full h-12 rounded-full bg-primary text-on-primary flex items-center justify-center gap-2 shadow-[0_4px_16px_rgba(0,97,148,0.25)] active:scale-[0.98] transition-all hover:brightness-105 font-body-md text-body-md font-bold tracking-wide" id="done-modal-btn" type="button"><span class="material-symbols-outlined text-[20px]">task_alt</span><span class="">Selesai &amp; Kembali ke Inventaris</span></button><div class="flex items-center gap-2"><button class="flex-1 h-10 rounded-full bg-surface-container hover:bg-surface-container-highest text-primary flex items-center justify-center gap-1.5 transition-colors active:scale-95 font-label-meta text-label-meta font-bold" id="view-log-btn" type="button"><span class="material-symbols-outlined text-[16px]">receipt_long</span><span class="">Lihat Log Pengiriman</span></button><button class="h-10 px-4 rounded-full bg-whatsapp-bubble/80 hover:bg-whatsapp-bubble text-whatsapp-teal flex items-center justify-center gap-1 transition-colors active:scale-95 font-label-meta text-label-meta font-bold" id="copy-link-btn" type="button"><span class="material-symbols-outlined text-[16px]">link</span><span class="">Salin Tautan</span></button></div></div>
+</div>
+</div>
+<script>
+  (function() {
+    const checkboxes = document.querySelectorAll('.recipient-checkbox');
+    const sendBtnLabel = document.getElementById('send-button-label');
+    const badgeCounter = document.getElementById('selected-counter-badge');
+    const copyLinkBtn = document.getElementById('copy-link-btn');
+    const copyFeedback = document.getElementById('copy-feedback-label');
+    const sendWaBtn = document.getElementById('send-whatsapp-btn');
+    const noteInput = document.getElementById('extra-note-input');
+
+    function updateCounter() {
+      let count = 0;
+      checkboxes.forEach(cb => {
+        if (cb.checked) count++;
+      });
+
+      if (badgeCounter) {
+        badgeCounter.textContent = `${count} Penerima Dipilih`;
+      }
+
+      if (sendBtnLabel) {
+        if (count === 0) {
+          sendBtnLabel.textContent = 'Pilih Minimal 1 Penerima';
+        } else {
+          sendBtnLabel.textContent = `Buka WhatsApp & Kirim (${count} Penerima)`;
+        }
+      }
+
+      if (sendWaBtn) {
+        if (count === 0) {
+          sendWaBtn.classList.add('opacity-50', 'pointer-events-none');
+        } else {
+          sendWaBtn.classList.remove('opacity-50', 'pointer-events-none');
+        }
+      }
+    }
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', updateCounter);
+    });
+
+    if (copyLinkBtn && copyFeedback) {
+      copyLinkBtn.addEventListener('click', () => {
+        const textToCopy = 'https://simsarpras.jeumala.sch.id/dir/pdf/DIR-VIII3-2026.pdf';
+        navigator.clipboard?.writeText(textToCopy).catch(() => {});
+        copyFeedback.textContent = 'Tautan Tersalin!';
+        copyLinkBtn.classList.add('bg-accent-emerald-bg', 'text-accent-emerald-dark');
+        setTimeout(() => {
+          copyFeedback.textContent = 'Salin Tautan PDF';
+          copyLinkBtn.classList.remove('bg-accent-emerald-bg', 'text-accent-emerald-dark');
+        }, 2200);
+      });
+    }
+
+    if (sendWaBtn) {
+      sendWaBtn.addEventListener('click', () => {
+        const note = noteInput && noteInput.value.trim() ? encodeURIComponent('\n\n*Catatan Khusus:* ' + noteInput.value.trim()) : '';
+        const baseMsg = encodeURIComponent(
+          "Assalamu'alaikum Wr. Wb.\n" +
+          "Kepada Yth. Kepala MTs Jeumala Amal / Koordinator Sarpras,\n" +
+          "Berikut Berita Acara Daftar Inventaris Ruang (DIR) Kelas VIII-3:\n" +
+          "• Wali Kelas: Ust. Ahmad Fauzi, S.Pd\n" +
+          "• Total Sarana: 42 Unit (39 Baik, 2 Servis, 1 Rusak Berat)\n" +
+          "• Dokumen PDF Resmi: https://simsarpras.jeumala.sch.id/dir/pdf/DIR-VIII3-2026.pdf"
+        );
+        window.open(`https://wa.me/?text=${baseMsg}${note}`, '_blank');
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-white/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(2,132,199,0.08)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-20 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant transition-colors" data-path="beranda" href="#"><span class="material-symbols-outlined text-[24px]">grid_view</span><span class="font-label-meta text-label-meta mt-1">Beranda</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant transition-colors" data-path="ruang-kelas" href="#"><span class="material-symbols-outlined text-[24px]">meeting_room</span><span class="font-label-meta text-label-meta mt-1">Ruang Kelas</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant transition-colors" data-path="lapor-wa" href="#"><span class="material-symbols-outlined text-[28px]">chat</span><span class="font-badge-mini text-badge-mini font-bold mt-0.5">Lapor WA</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant transition-colors" data-path="tiket-saya" href="#"><span class="material-symbols-outlined text-[24px]">confirmation_number</span><span class="font-label-meta text-label-meta mt-1">Tiket Saya</span></a></div></nav>
+
+</body></html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "inverse-surface": "#283044",
+        "on-primary": "#ffffff",
+        "surface-container-lowest": "#ffffff",
+        "inverse-primary": "#93ccff",
+        "on-secondary-fixed": "#001d32",
+        "surface-container-low": "#f2f3ff",
+        "on-surface-variant": "#3f4850",
+        "surface-container": "#eaedff",
+        "on-secondary": "#ffffff",
+        "primary": "#006194",
+        "background": "#faf8ff",
+        "whatsapp-teal": "#075E54",
+        "accent-gold-bg": "#FEF3C7",
+        "accent-emergency-dark": "#991B1B",
+        "on-tertiary-fixed-variant": "#0039b5",
+        "on-primary-fixed": "#001d31",
+        "inverse-on-surface": "#eef0ff",
+        "accent-emerald-dark": "#166534",
+        "surface-soft": "#E8F2FE",
+        "surface-bright": "#faf8ff",
+        "on-tertiary-fixed": "#001551",
+        "accent-sky-light": "#38BDF8",
+        "surface-hover": "#F8FAFC",
+        "tertiary-container": "#4069f2",
+        "text-muted": "#64748B",
+        "surface-dim": "#d2d9f4",
+        "error-container": "#ffdad6",
+        "outline": "#707881",
+        "surface-white": "#FFFFFF",
+        "accent-gold": "#F59E0B",
+        "navy-deep-start": "#0B192C",
+        "on-surface": "#131b2e",
+        "surface": "#faf8ff",
+        "on-primary-container": "#fdfcff",
+        "navy-deep-end": "#0F2847",
+        "secondary-fixed": "#cde5ff",
+        "on-error-container": "#93000a",
+        "primary-fixed-dim": "#93ccff",
+        "on-tertiary": "#ffffff",
+        "surface-tint": "#006398",
+        "border-subtle": "#E2E8F0",
+        "accent-emerald": "#10B981",
+        "surface-container-highest": "#dae2fd",
+        "secondary-fixed-dim": "#94ccff",
+        "on-secondary-fixed-variant": "#004b74",
+        "accent-emerald-bg": "#DCFCE7",
+        "surface-variant": "#dae2fd",
+        "secondary": "#006399",
+        "outline-variant": "#bfc7d2",
+        "error": "#ba1a1a",
+        "tertiary-fixed-dim": "#b7c4ff",
+        "on-primary-fixed-variant": "#004b73",
+        "surface-container-high": "#e2e7ff",
+        "canvas-bg": "#F0F7FF",
+        "on-secondary-container": "#004f7b",
+        "whatsapp-bubble": "#DCF8C6",
+        "accent-emergency-bg": "#FEE2E2",
+        "tertiary-fixed": "#dce1ff",
+        "on-tertiary-container": "#fffbff",
+        "primary-fixed": "#cce5ff",
+        "whatsapp-green": "#25D366",
+        "accent-emergency": "#EF4444",
+        "tertiary": "#1d4ed8",
+        "secondary-container": "#7bc2ff",
+        "on-error": "#ffffff",
+        "on-background": "#131b2e",
+        "canvas-sky-start": "#E0F2FE",
+        "primary-container": "#007bb9"
+      },
+      "borderRadius": {
+        "DEFAULT": "1rem",
+        "lg": "2rem",
+        "xl": "3rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-2xl": "3rem",
+        "margin-mobile": "1rem",
+        "space-xl": "2rem",
+        "space-sm": "0.5rem",
+        "margin": "1.75rem",
+        "gutter": "1.5rem",
+        "space-lg": "1.5rem",
+        "space-md": "1rem",
+        "space-xs": "0.25rem",
+        "gutter-mobile": "1rem"
+      },
+      "fontFamily": {
+        "body-md": ["Plus Jakarta Sans"],
+        "body-lg": ["Plus Jakarta Sans"],
+        "label-table-head": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"],
+        "headline-sm": ["Plus Jakarta Sans"],
+        "display-hero": ["Plus Jakarta Sans"],
+        "label-meta": ["Plus Jakarta Sans"],
+        "badge-mini": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"],
+        "display-hero-mobile": ["Plus Jakarta Sans"],
+        "display-stat": ["Plus Jakarta Sans"],
+        "body-sm": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+        "label-table-head": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+        "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "700"}],
+        "display-hero": ["46px", {"lineHeight": "54px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+        "label-meta": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+        "badge-mini": ["11px", {"lineHeight": "14px", "fontWeight": "700"}],
+        "headline-lg": ["28px", {"lineHeight": "36px", "fontWeight": "800"}],
+        "display-hero-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+        "display-stat": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+        "body-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}]
+      }
+    }
+  }
+}</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 inset-x-0 z-50 bg-surface-white/85 backdrop-blur-xl shadow-[0_4px_20px_rgba(2,132,199,0.06)] pt-safe"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary shadow-[0_2px_8px_rgba(0,97,148,0.12)]"><span class="material-symbols-outlined text-[22px]">account_balance</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">SIM-SARPRAS</span><span class="font-badge-mini text-badge-mini text-text-muted leading-tight">MTs Jeumala Amal</span></div></div><div class="flex items-center gap-space-sm"><button class="min-h-[44px] px-3 py-1.5 rounded-full bg-accent-emergency-bg text-accent-emergency flex items-center gap-1.5 shadow-[0_4px_12px_rgba(239,68,68,0.18)] active:scale-95 transition-transform" type="button"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-emergency opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-accent-emergency"></span></span><span class="font-badge-mini text-badge-mini font-bold uppercase tracking-wider">SOS</span></button><a class="min-h-[44px] min-w-[44px] flex items-center justify-center" data-path="profil-wali-kelas" href="#"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_8px_rgba(0,97,148,0.25)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></a></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Dispatch State Logic -->
+<script>
+    function updateUrgency(level) {
+      const pills = document.querySelectorAll('.urgency-pill');
+      pills.forEach(p => {
+        p.classList.remove('bg-accent-emergency', 'text-on-primary', 'shadow-md', 'scale-[1.02]');
+        p.classList.remove('bg-accent-gold', 'text-on-primary', 'shadow-md');
+        p.classList.remove('bg-accent-emerald', 'text-on-primary', 'shadow-md');
+        p.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      });
+
+      const selected = document.getElementById('urgency-' + level);
+      const previewTag = document.getElementById('wa-preview-urgency');
+      
+      if(level === 'darurat') {
+        selected.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        selected.classList.add('bg-accent-emergency', 'text-on-primary', 'shadow-md', 'scale-[1.02]');
+        if(previewTag) previewTag.innerText = '🔴 MENDESAK (EMERGENCY < 2 Jam)';
+      } else if(level === 'sedang') {
+        selected.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        selected.classList.add('bg-accent-gold', 'text-on-primary', 'shadow-md');
+        if(previewTag) previewTag.innerText = '🟡 SEDANG (Target 24-48 Jam)';
+      } else {
+        selected.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        selected.classList.add('bg-accent-emerald', 'text-on-primary', 'shadow-md');
+        if(previewTag) previewTag.innerText = '🟢 BIASA (Target 7 Hari)';
+      }
+    }
+
+    function toggleHistory() {
+      const hist = document.getElementById('history-content');
+      const icon = document.getElementById('history-chevron');
+      if (hist.classList.contains('hidden')) {
+        hist.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        hist.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+  </script>
+<!-- Content Container with Ice-Blue Origami Canvas Feel -->
+<div class="px-margin-mobile pt-space-md pb-space-2xl space-y-space-md">
+<!-- 1. Header Context & SLA Card -->
+<div class="relative overflow-hidden rounded-lg bg-surface-white p-space-md shadow-[0_10px_25px_-5px_rgba(2,132,199,0.08),0_1px_3px_rgba(0,0,0,0.04)]">
+<!-- Origami Decorative Geometric Facet -->
+<div class="absolute -top-10 -right-10 w-28 h-28 bg-canvas-sky-start/60 rounded-full blur-xl pointer-events-none"></div>
+<div class="absolute top-2 right-2 text-primary/10 select-none pointer-events-none">
+<span class="material-symbols-outlined text-[64px]">send</span>
+</div>
+<div class="relative z-10 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center text-primary shadow-sm font-headline-sm">
+              AF
+            </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">Ust. Ahmad Fauzi, S.Pd</span>
+<span class="material-symbols-outlined text-accent-emerald text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted">Wali Kelas VIII-3 • Gedung Putra Lt. 2</span>
+</div>
+</div>
+</div>
+<!-- SLA Pill -->
+<div class="flex items-center justify-between mt-1 pt-2 bg-surface-soft/80 rounded-full px-3.5 py-1.5">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="font-badge-mini text-badge-mini uppercase tracking-wider font-bold">Target Respon Siaga Lapangan</span>
+</div>
+<span class="font-label-meta text-label-meta text-primary font-bold">&lt; 120 Menit</span>
+</div>
+<!-- Emergency Banner Note -->
+<div class="flex items-start gap-2 bg-accent-emergency-bg rounded-DEFAULT p-2.5">
+<span class="material-symbols-outlined text-accent-emergency text-[18px] shrink-0 mt-0.5">notification_important</span>
+<p class="font-body-sm text-body-sm text-accent-emergency-dark leading-snug">
+            Kipas angin / penerangan KBM padam? Laporkan langsung untuk penanganan regu teknisi.
+          </p>
+</div>
+</div>
+</div>
+<!-- 2. Room & Location Picker -->
+<div class="rounded-lg bg-surface-white p-space-md shadow-[0_10px_25px_-5px_rgba(2,132,199,0.08)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">meeting_room</span>
+          Lokasi Terkena Dampak
+        </label>
+<span class="font-badge-mini text-badge-mini text-primary uppercase font-bold tracking-wider">Terkunci PIC</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="relative flex items-center">
+<select class="w-full h-12 pl-3.5 pr-10 rounded-DEFAULT bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-white focus:shadow-[0_0_0_2px_rgba(0,97,148,0.25)] transition-all">
+<option selected="">Kelas VIII-3 (Gedung Putra Lt. 2 - Sayap Barat)</option>
+<option>Laboratorium Komputer 2 (Lt. 1)</option>
+<option>Perpustakaan Madrasah (Lt. 2)</option>
+<option>Masjid Jami' Santri Putra (Lt. 1)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 pointer-events-none text-outline text-[20px]">expand_more</span>
+</div>
+<!-- QR Scan Trigger Button -->
+<button class="w-full h-11 rounded-full bg-surface-soft hover:bg-surface-container text-primary flex items-center justify-center gap-2 transition-transform active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[19px]">qr_code_scanner</span>
+<span class="font-label-meta text-label-meta">Pindai QR Kusen Pintu Ruang Kelas</span>
+</button>
+</div>
+</div>
+<!-- 3. Urgency / Priority Selector -->
+<div class="rounded-lg bg-surface-white p-space-md shadow-[0_10px_25px_-5px_rgba(2,132,199,0.08)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">speed</span>
+          Tingkat Urgensi
+        </span>
+<span class="font-badge-mini text-badge-mini text-accent-emergency font-bold uppercase tracking-wider animate-pulse flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-accent-emergency"></span>
+          Prioritas 1
+        </span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<!-- Biasa -->
+<button class="urgency-pill min-h-[48px] p-2 rounded-DEFAULT bg-surface-container-low text-on-surface-variant flex flex-col items-center justify-center text-center transition-all" id="urgency-biasa" onclick="updateUrgency('biasa')" type="button">
+<span class="font-label-table-head text-label-table-head">BIASA</span>
+<span class="font-badge-mini text-badge-mini mt-0.5 opacity-80">Cat, Mebel (7 Hari)</span>
+</button>
+<!-- Sedang -->
+<button class="urgency-pill min-h-[48px] p-2 rounded-DEFAULT bg-surface-container-low text-on-surface-variant flex flex-col items-center justify-center text-center transition-all" id="urgency-sedang" onclick="updateUrgency('sedang')" type="button">
+<span class="font-label-table-head text-label-table-head">SEDANG</span>
+<span class="font-badge-mini text-badge-mini mt-0.5 opacity-80">Pintu, Stopkontak (24j)</span>
+</button>
+<!-- Mendesak (Active state) -->
+<button class="urgency-pill min-h-[48px] p-2 rounded-DEFAULT bg-accent-emergency text-on-primary shadow-md scale-[1.02] flex flex-col items-center justify-center text-center transition-all" id="urgency-darurat" onclick="updateUrgency('darurat')" type="button">
+<div class="flex items-center gap-1">
+<span class="font-label-table-head text-label-table-head">DARURAT</span>
+<span class="material-symbols-outlined text-[14px]">warning</span>
+</div>
+<span class="font-badge-mini text-badge-mini mt-0.5 opacity-90">&lt; 2 Jam (KBM)</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted mt-1">
+        Pilihan <span class="font-bold text-accent-emergency">Darurat</span> akan mengirimkan notifikasi radio dan prioritas sirene ke WhatsApp Regu Teknisi Jaga.
+      </p>
+</div>
+<!-- 4. Damaged Item & Description -->
+<div class="rounded-lg bg-surface-white p-space-md shadow-[0_10px_25px_-5px_rgba(2,132,199,0.08)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">build_circle</span>
+          Nama Sarana &amp; Kerusakan
+        </label>
+<span class="font-badge-mini text-badge-mini bg-surface-soft text-primary px-2 py-0.5 rounded-full font-bold">KPS-VIII3-02</span>
+</div>
+<!-- Item Title -->
+<div class="flex flex-col gap-1">
+<span class="font-label-meta text-label-meta text-text-muted">Aset Terdaftar di Ruangan:</span>
+<input class="w-full h-12 px-3.5 rounded-DEFAULT bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-white focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,97,148,0.25)] transition-all" type="text" value='Kipas Angin Dinding Regency 18" (Unit 2 - Plafon Kanan)'/>
+</div>
+<!-- Problem Narrative -->
+<div class="flex flex-col gap-1 mt-1">
+<span class="font-label-meta text-label-meta text-text-muted">Uraian Kerusakan &amp; Dampak Langsung KBM:</span>
+<textarea class="w-full p-3.5 rounded-DEFAULT bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-white focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,97,148,0.25)] transition-all resize-none leading-relaxed" rows="3">Kipas angin mendadak mati saat KBM siang hari dan tercium bau sengit terbakar. Suhu kelas mencapai 34°C, 32 santri kepanasan dan pembelajaran tidak kondusif.</textarea>
+</div>
+</div>
+<!-- 5. Camera & Photo Attachment -->
+<div class="rounded-lg bg-surface-white p-space-md shadow-[0_10px_25px_-5px_rgba(2,132,199,0.08)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">photo_camera</span>
+          Bukti Foto Lapangan
+        </span>
+<span class="font-badge-mini text-badge-mini text-accent-emerald font-bold">1 Foto Terlampir</span>
+</div>
+<!-- Upload / Re-Take Photo Preview Card -->
+<div class="relative overflow-hidden rounded-DEFAULT bg-surface-soft p-3 flex items-center gap-3">
+<!-- Photo Placeholder with Strict Image Prompt -->
+<img class="w-20 h-20 rounded-DEFAULT object-cover shadow-sm shrink-0" data-alt="Close up smartphone capture of broken classroom electrical wall fan Regency brand with black plastic motor housing and slightly burnt wire connector inside Islamic madrasah classroom white wall, bright natural daylight, clear photo evidence" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC80RvxkzV9Gj1okRd4nX6WGO0UzKidvgyTbkKRsbEVZXD7hdu4GjjsosUQ4Mx2TDwvnZlfen7EoJhyiJWGmIUSQeLTZothzzd58JVvitr1Odf4Kcg6laMEdeuRDY6yhhbwhjxN_Wwbv5viYwlcxcrQ58ha_6I5OE4eihqk2gyF6HePIj1eA3aOuhHDlyowLVECxC3hdtfJ6Z7MPsIcw6RIjyxQfmPqHLq8s_OdXWE"/>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-meta text-label-meta text-on-surface truncate">bukti-kipas-viii3-terbakar.jpg</span>
+<span class="font-body-sm text-body-sm text-text-muted mt-0.5">240 KB • Terkompresi HD</span>
+<div class="flex items-center gap-2 mt-2">
+<button class="min-h-[32px] px-3 py-1 rounded-full bg-surface-white text-primary flex items-center gap-1 shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span class="font-badge-mini text-badge-mini">Ambil Ulang</span>
+</button>
+<span class="text-accent-emerald flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="font-badge-mini text-badge-mini font-bold">Siap</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 6. Live WhatsApp Message Generator Preview -->
+<div class="rounded-lg bg-surface-white shadow-[0_10px_25px_-5px_rgba(2,132,199,0.08)] overflow-hidden">
+<!-- WhatsApp Simulated Header Bar -->
+<div class="bg-whatsapp-teal px-space-md py-2.5 flex items-center justify-between text-on-primary">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-whatsapp-green flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-meta text-label-meta font-bold">Hotline Sarpras Jeumala</span>
+<span class="font-badge-mini text-badge-mini text-accent-emerald-bg">Online • Regu Jaga Pak Mulyadi</span>
+</div>
+</div>
+<span class="font-badge-mini text-badge-mini bg-surface-white/20 px-2 py-0.5 rounded-full uppercase">Template Otomatis</span>
+</div>
+<!-- Chat Bubble Surface -->
+<div class="p-space-md bg-surface-container-low/60 flex flex-col gap-2">
+<div class="self-end max-w-[95%] bg-whatsapp-bubble text-on-surface p-3 rounded-lg rounded-tr-none shadow-sm flex flex-col gap-1.5 font-body-sm text-body-sm leading-relaxed">
+<p class="font-bold text-whatsapp-teal font-label-table-head text-label-table-head leading-tight">
+            🚨 TIKET PERMINTAAN PERBAIKAN SARPRAS<br/>
+            MTs Jeumala Amal Lueng Putu
+          </p>
+<div class="space-y-0.5 font-body-sm text-body-sm">
+<p><span class="font-bold">No. Tiket:</span> #FIX-202610-023</p>
+<p class="text-accent-emergency font-bold" id="wa-preview-urgency">🔴 MENDESAK (EMERGENCY &lt; 2 Jam)</p>
+<p><span class="font-bold">Lokasi:</span> Kelas VIII-3 (Gedung Putra Lt. 2)</p>
+<p><span class="font-bold">Pelapor:</span> Ust. Ahmad Fauzi, S.Pd (Wali Kelas)</p>
+<p><span class="font-bold">Item:</span> Kipas Angin Dinding Regency 18" (#KPS-02)</p>
+<p><span class="font-bold">Dampak:</span> 32 santri kepanasan, bau terbakar saat KBM</p>
+<p><span class="font-bold">Foto Bukti:</span> https://simsarpras.jeumala.sch.id/bukti/fix-023.jpg</p>
+</div>
+<div class="flex items-center justify-end gap-1 mt-1 text-text-muted">
+<span class="font-badge-mini text-badge-mini">11:42</span>
+<span class="material-symbols-outlined text-[14px] text-primary">done_all</span>
+</div>
+</div>
+<div class="flex items-center justify-center gap-1.5 text-text-muted py-1">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span class="font-badge-mini text-badge-mini">Pesan otomatis terformat rapi &amp; terenkripsi via WhatsApp Gateway API</span>
+</div>
+</div>
+</div>
+<!-- 7. Primary Action Button (WhatsApp Dispatch) -->
+<div class="pt-1 flex flex-col gap-2">
+<a class="w-full min-h-[52px] rounded-full bg-gradient-to-r from-whatsapp-green to-whatsapp-teal text-surface-white font-headline-sm text-headline-sm flex items-center justify-center gap-2.5 shadow-[0_8px_20px_rgba(37,211,102,0.38)] active:scale-[0.98] transition-transform" href="https://wa.me/6281234567890?text=TIKET-FIX-202610-023" target="_blank">
+<span class="material-symbols-outlined text-[24px]">send</span>
+<span>BUKA WA &amp; KIRIM TIKET SEKARANG</span>
+</a>
+<span class="text-center font-badge-mini text-badge-mini text-text-muted">
+        ⚡ Data otomatis tersinkron ke Registrasi Inventaris SIM-SARPRAS MTsJA
+      </span>
+</div>
+<!-- 8. Recent Tickets Accordion / Quick History -->
+<div class="rounded-lg bg-surface-white p-space-md shadow-[0_10px_25px_-5px_rgba(2,132,199,0.08)] flex flex-col">
+<button class="flex items-center justify-between text-left focus:outline-none" onclick="toggleHistory()" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">history</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Riwayat Tiket Kelas VIII-3</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-badge-mini text-badge-mini bg-surface-soft text-primary px-2.5 py-1 rounded-full font-bold">2 Tiket</span>
+<span class="material-symbols-outlined text-outline text-[20px] transition-transform duration-200" id="history-chevron">expand_more</span>
+</div>
+</button>
+<!-- Accordion Body (Collapsible list) -->
+<div class="mt-space-md space-y-2.5 pt-2 border-t-0" id="history-content">
+<!-- Item 1: Active In-Progress -->
+<div class="p-3 rounded-DEFAULT bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface font-bold">#FIX-202610-023</span>
+<span class="font-badge-mini text-badge-mini px-2.5 py-0.5 rounded-full bg-accent-gold-bg text-accent-gold font-bold">Menunggu Teknisi</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Kipas Angin Dinding Regency 18" (Unit 2)</p>
+<div class="flex items-center justify-between text-text-muted mt-0.5">
+<span class="font-badge-mini text-badge-mini">Hari ini • 11:40 WIB</span>
+<span class="font-badge-mini text-badge-mini text-primary font-bold">PIC: Ust. Ahmad Fauzi</span>
+</div>
+</div>
+<!-- Item 2: Completed -->
+<div class="p-3 rounded-DEFAULT bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-on-surface font-bold">#FIX-202610-019</span>
+<span class="font-badge-mini text-badge-mini px-2.5 py-0.5 rounded-full bg-accent-emerald-bg text-accent-emerald font-bold">Selesai Diperbaiki</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Lampu TL LED Depan Papan Tulis 36W</p>
+<div class="flex items-center justify-between text-text-muted mt-0.5">
+<span class="font-badge-mini text-badge-mini">14 Okt 2026 • 15:30 WIB</span>
+<span class="font-badge-mini text-badge-mini text-text-muted">Teknisi: Pak Mulyadi</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-white/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(2,132,199,0.08)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-20 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant transition-colors" data-path="beranda" href="#"><span class="material-symbols-outlined text-[24px]">grid_view</span><span class="font-label-meta text-label-meta mt-1">Beranda</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant transition-colors" data-path="ruang-kelas" href="#"><span class="material-symbols-outlined text-[24px]">meeting_room</span><span class="font-label-meta text-label-meta mt-1">Ruang Kelas</span></a><a aria-current="page" class="relative -top-3 flex flex-col items-center justify-center min-w-[56px] min-h-[56px] p-2 rounded-full bg-gradient-to-tr from-whatsapp-teal to-whatsapp-green shadow-[0_8px_20px_rgba(37,211,102,0.38)] active:scale-95 transition-transform text-primary font-bold" data-path="lapor-wa" href="#"><span class="material-symbols-outlined text-[28px]">chat</span><span class="font-badge-mini text-badge-mini font-bold mt-0.5">Lapor WA</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] py-1 text-on-surface-variant transition-colors" data-path="tiket-saya" href="#"><span class="material-symbols-outlined text-[24px]">confirmation_number</span><span class="font-label-meta text-label-meta mt-1">Tiket Saya</span></a></div></nav></body></html>

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIM-SARPRAS MTs Jeumala Amal Lueng Putu — Sistem Inventaris & Pelaporan Sarpras Cepat</title>
+  <meta name="description" content="Sistem Informasi Manajemen Sarana, Prasarana & Inventaris Barang MTs Jeumala Amal Lueng Putu, Pidie Jaya, Aceh. Mengelola 43 ruangan, 1.050 santri, dan layanan cepat tanggap perbaikan kelas via WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Custom Interactive Cursor Follower -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- Top Floating Navbar -->
+  <div class="header-wrapper">
+    <nav class="navbar" id="navbar">
+      <a href="#beranda" class="nav-brand">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnPXH9tySJzrYUbTLSHtJEUZ2KF7HJ-zzxlBZTeKJJ6LJSBrblbvsLG5lkkGSuMU5VpK6A1CeldaALmItr6UgXCYUDBVed3KrWuCfcNK6qJjvB-QlMt4CRw4g9Cdoj0U5ri0AL3CUVJH5OW_zj6RGwr0bQNeuVmEmA_YHIa4CbiX9Tk3tStjN3DIVO0sLEpXSHN3RR9hAdw2_wbVsSwIiLWgKALgud_o14IJDGznI" alt="Logo MTs Jeumala Amal" style="height: 38px; width: auto; object-fit: contain;">
+        <div class="brand-text">
+          <span class="brand-title">SIM-SARPRAS</span>
+          <span class="brand-subtitle">MTs Jeumala Amal</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+        <li><a href="#katalog-ruangan" class="nav-link">43 Ruangan</a></li>
+        <li><a href="#layanan-prioritas" class="nav-link">Layanan Prioritas</a></li>
+        <li><a href="#alur-lapor" class="nav-link">Alur Lapor</a></li>
+        <li><a href="#lacak-tiket" class="nav-link" onclick="openWidgetTab('tab-lacak')">Lacak Tiket</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-pill btn-outline-primary" id="btnOpenAuth">
+          <span>Masuk Portal 👤</span>
+        </button>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero-section" id="beranda">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span>⚡</span> SISTEM SARPRAS DIGITAL TERPADU
+        </div>
+        <h1 class="hero-title">
+          SARPRAS MODERN <br>
+          <span>MTs JEUMALA AMAL</span>
+        </h1>
+        <span class="hero-italic-subtitle">"Aset Terjaga, Belajar Nyaman, Madrasah Hebat."</span>
+        <p class="hero-desc">
+          Sistem Informasi Manajemen Sarana & Prasarana Terpadu MTs Jeumala Amal Lueng Putu, Pidie Jaya. Mengelola 43 ruangan, 1.050 santri, dan layanan tanggap darurat perbaikan kelas langsung via WhatsApp.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#katalog-ruangan" class="btn-pill btn-primary shimmer-btn">
+            <span>Jelajahi 43 Ruangan ↗</span>
+          </a>
+          <button class="btn-pill btn-danger" onclick="openWidgetTab('tab-lapor')">
+            <span>Lapor Kerusakan (WA) 🚨</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="origami-canvas" id="heroOrigamiCanvas" style="padding: 0; overflow: hidden;">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsqw0oIgJEhAA60IiXGgwwIYMy5JZP2_0C_SCIaxzumN96544ziRYafu_fhphvIwjH5lvso9uNKNHTQopdUqv6Awx5teB0fuq6WpECYOin7n6qEDUoW9gE0hRv8AM7yru8gDWGlgsXZ0MhnH8YBpZxcFfl-5gD9Tk8cA1eMPbAPqBN1iEiKNUkzV7Sbw-dvjWLX6o-X-i4Cht0ZWnm98PvCAE-n4NR4Mh_THy7Gjo" alt="3D Origami Paper Plane & Islamic Campus" style="width: 100%; height: 100%; object-fit: cover; border-radius: 32px;">
+
+          <div class="origami-badge-floating badge-top-left">
+            <span>🏫</span> 43 Ruangan Terdata
+          </div>
+          <div class="origami-badge-floating badge-bottom-right">
+            <span>⚡</span> Respon Cepat &lt; 2 Jam
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Overlapping Floating Multi-Tab Quick Action Widget -->
+  <section class="widget-section" id="quick-widget">
+    <div class="container">
+      <div class="floating-widget-card">
+        <!-- Widget Tabs -->
+        <div class="widget-tabs">
+          <button class="widget-tab-btn active" data-target="tab-lapor">
+            <span>🚨 Lapor Cepat / Tiket WA</span>
+          </button>
+          <button class="widget-tab-btn" data-target="tab-cari">
+            <span>🔍 Cari Aset & Ruangan</span>
+          </button>
+          <button class="widget-tab-btn" data-target="tab-pinjam">
+            <span>📦 Peminjaman Alat KBM</span>
+          </button>
+          <button class="widget-tab-btn" data-target="tab-lacak">
+            <span>🎫 Lacak Status Tiket</span>
+          </button>
+        </div>
+
+        <!-- Tab 1: Form Lapor Tiket WA -->
+        <div class="widget-content-pane active" id="tab-lapor">
+          <form id="formTiketWA">
+            <div class="widget-form-grid">
+              <div class="form-field">
+                <label for="pilihRuang">Ruangan Terkendala</label>
+                <select id="pilihRuang" class="form-select" required>
+                  <option value="">-- Pilih dari 43 Ruangan --</option>
+                  <!-- Diisi otomatis oleh JavaScript -->
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label>Tingkat Prioritas</label>
+                <div class="priority-pills">
+                  <button type="button" class="priority-pill-btn" data-priority="Biasa">🟢 Biasa</button>
+                  <button type="button" class="priority-pill-btn" data-priority="Sedang">🟡 Sedang</button>
+                  <button type="button" class="priority-pill-btn active" data-priority="Mendesak">🔴 Mendesak</button>
+                </div>
+                <input type="hidden" id="prioritasInput" value="Mendesak">
+              </div>
+
+              <div class="form-field">
+                <label for="deskripsiKendala">Uraian Kerusakan</label>
+                <input type="text" id="deskripsiKendala" class="form-input" placeholder="Lampu mati, kipas rusak, listrik konslet..." required>
+              </div>
+
+              <div class="form-field">
+                <label>&nbsp;</label>
+                <button type="submit" class="btn-pill btn-primary shimmer-btn" style="width: 100%;">
+                  <span>Kirim Tiket WhatsApp 🚀</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Area Tambahan Lapor (Nama Pelapor & Kamera Foto) -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--border-subtle);">
+              <div class="form-field">
+                <label for="namaPelapor">Nama Wali Kelas / PJ</label>
+                <input type="text" id="namaPelapor" class="form-input" placeholder="Nama Anda (contoh: Ust. Ahmad Fauzi)">
+              </div>
+              <div class="form-field">
+                <label for="waPelapor">No. WhatsApp Anda</label>
+                <input type="tel" id="waPelapor" class="form-input" placeholder="0812XXXXXXXX">
+              </div>
+              <div class="form-field">
+                <label for="fotoInput">Foto Bukti Kerusakan (Kamera HP)</label>
+                <input type="file" id="fotoInput" class="form-input" accept="image/*" capture="environment">
+                <span id="fotoStatus" style="font-size: 0.75rem; color: var(--primary); margin-top: 2px;"></span>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Tab 2: Cari Aset & Ruangan -->
+        <div class="widget-content-pane" id="tab-cari">
+          <div style="display: grid; grid-template-columns: 1.5fr 1fr auto; gap: 16px; align-items: flex-end;">
+            <div class="form-field">
+              <label for="cariKeyword">Pencarian Barang / No. Inventaris</label>
+              <input type="text" id="cariKeyword" class="form-input" placeholder="Ketik nama proyektor, mebeler, no. BOS...">
+            </div>
+            <div class="form-field">
+              <label for="filterRuangCari">Filter Lokasi Ruang</label>
+              <select id="filterRuangCari" class="form-select">
+                <option value="">Semua Ruangan</option>
+              </select>
+            </div>
+            <button class="btn-pill btn-primary" onclick="cariAsetQuick()">
+              <span>Cari Aset 🔍</span>
+            </button>
+          </div>
+          <div id="hasilPencarianAset" style="margin-top: 18px; display: none;"></div>
+        </div>
+
+        <!-- Tab 3: Peminjaman Alat KBM -->
+        <div class="widget-content-pane" id="tab-pinjam">
+          <form id="formPinjamQuick">
+            <div class="widget-form-grid">
+              <div class="form-field">
+                <label for="pinjamAlat">Pilih Alat KBM Bergerak</label>
+                <select id="pinjamAlat" class="form-select" required>
+                  <option value="LCD Proyektor InFocus (Unit 01)">LCD Proyektor InFocus Portable</option>
+                  <option value="Wireless Sound System 15 (Baretone)">Wireless Sound System Baretone 15"</option>
+                  <option value="Kabel Roll 25 Meter">Kabel Roll 25 Meter</option>
+                  <option value="Set Bola Futsal & Voli">Set Bola Futsal & Voli (5 Unit)</option>
+                  <option value="Mikroskop Siswa Lab IPA">Mikroskop Siswa Lab IPA</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="pinjamPeminjam">Nama Guru / Karyawan</label>
+                <input type="text" id="pinjamPeminjam" class="form-input" placeholder="Nama Guru / Pemohon" required>
+              </div>
+              <div class="form-field">
+                <label for="pinjamKeperluan">Keperluan Pembelajaran</label>
+                <input type="text" id="pinjamKeperluan" class="form-input" placeholder="KBM Multimedia / Ujian / Acara" required>
+              </div>
+              <div class="form-field">
+                <label>&nbsp;</label>
+                <button type="submit" class="btn-pill btn-primary" style="width: 100%;">
+                  <span>Ajukan Pinjam 📦</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Tab 4: Lacak Status Tiket -->
+        <div class="widget-content-pane" id="tab-lacak">
+          <div style="display: grid; grid-template-columns: 2fr auto; gap: 16px; align-items: flex-end; max-width: 600px;">
+            <div class="form-field">
+              <label for="inputLacakTiket">Masukkan Nomor Tiket Perbaikan</label>
+              <input type="text" id="inputLacakTiket" class="form-input" placeholder="Contoh: FIX-20261028-001">
+            </div>
+            <button class="btn-pill btn-primary" onclick="lacakTiketSekarang()">
+              <span>Periksa Status 🎫</span>
+            </button>
+          </div>
+          <div id="hasilLacakTiket" style="margin-top: 18px; display: none;"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Row of 4 Floating Pebble Feature Cards -->
+  <section class="pebble-section">
+    <div class="container pebble-grid">
+      <div class="pebble-card">
+        <div class="pebble-icon-wrap">🏫</div>
+        <h4>43 Ruangan Terkelola</h4>
+        <p>30 Kelas (VII-1 s/d IX-10), 6 Lab Komputer, Lab IPA, 2 Sarana Olahraga, dan Ruang Kantor terdata lengkap.</p>
+      </div>
+
+      <div class="pebble-card">
+        <div class="pebble-icon-wrap">⚡</div>
+        <h4>Respon Cepat < 2 Jam</h4>
+        <p>Penanganan darurat bola lampu padam, kipas angin rusak, dan instalasi listrik kelas langsung ke teknisi.</p>
+      </div>
+
+      <div class="pebble-card">
+        <div class="pebble-icon-wrap">🏷️</div>
+        <h4>QR Code Terstandar</h4>
+        <p>Setiap aset memiliki kode QR resmi. Pelacakan nomor inventaris, tahun beli, dan sumber dana BOS/Komite.</p>
+      </div>
+
+      <div class="pebble-card">
+        <div class="pebble-icon-wrap">🤝</div>
+        <h4>Akuntabilitas 43 PJ Ruang</h4>
+        <p>Wali Kelas dan Kepala Lab bertanggung jawab penuh memvalidasi kondisi dan aset ruangannya secara berkala.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 43 Rooms Featured Catalog (3D Tilt Grid) -->
+  <section class="catalog-section" id="katalog-ruangan">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Fasilitas & Ruangan Madrasah</h2>
+          <p class="section-subtitle">Daftar 43 ruangan belajar dan fasilitas terpadu MTs Jeumala Amal Lueng Putu</p>
+        </div>
+        <button class="btn-pill btn-outline-primary" onclick="filterRuang('semua')">
+          <span>Lihat Semua 43 Ruangan →</span>
+        </button>
+      </div>
+
+      <!-- Filter Kategori Tabs -->
+      <div class="category-filter-bar" id="categoryFilterBar">
+        <button class="filter-btn active" data-filter="semua">Semua (43)</button>
+        <button class="filter-btn" data-filter="Kelas VII">Kelas VII (10)</button>
+        <button class="filter-btn" data-filter="Kelas VIII">Kelas VIII (10)</button>
+        <button class="filter-btn" data-filter="Kelas IX">Kelas IX (10)</button>
+        <button class="filter-btn" data-filter="Laboratorium Komputer">Lab Komputer (6)</button>
+        <button class="filter-btn" data-filter="Fasilitas">Lab IPA & Fasilitas (7)</button>
+      </div>
+
+      <!-- Grid Kartu Ruangan 3D Tilt -->
+      <div class="rooms-grid" id="roomsGridContainer">
+        <!-- Dirender secara dinamis oleh JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Priority Tiers (Royal Sapphire Background) -->
+  <section class="container" id="layanan-prioritas">
+    <div class="priority-section">
+      <div class="priority-head">
+        <h2>Tingkat Prioritas Layanan Sarpras</h2>
+        <p>Standar Operasional Penanganan Kendala Fasilitas Belajar Santri MTs Jeumala Amal</p>
+      </div>
+
+      <div class="priority-grid">
+        <!-- Card 1: Prioritas Biasa -->
+        <div class="tier-card">
+          <h4>Prioritas Rutin</h4>
+          <span class="tier-sla">SLA: 2–3 Hari Kerja</span>
+          <ul class="tier-list">
+            <li><span>✓</span> Pengecatan kusam / coretan</li>
+            <li><span>✓</span> Perbaikan taplak meja & gorden</li>
+            <li><span>✓</span> Penataan ulang bangku santri</li>
+            <li><span>✓</span> Pelabelan ulang stiker inventaris</li>
+          </ul>
+          <button class="btn-pill btn-outline-primary" onclick="setQuickPriority('Biasa')">
+            <span>Pilih Prioritas Biasa</span>
+          </button>
+        </div>
+
+        <!-- Card 2: Prioritas Sedang -->
+        <div class="tier-card">
+          <h4>Prioritas Sedang</h4>
+          <span class="tier-sla">SLA: 1x24 Jam Kerja</span>
+          <ul class="tier-list">
+            <li><span>✓</span> Engsel pintu kelas seret / kaku</li>
+            <li><span>✓</span> Stopkontak meja siswa longgar</li>
+            <li><span>✓</span> Papan tulis whiteboard buram</li>
+            <li><span>✓</span> Kunci lemari kelas bermasalah</li>
+          </ul>
+          <button class="btn-pill btn-outline-primary" onclick="setQuickPriority('Sedang')">
+            <span>Pilih Prioritas Sedang</span>
+          </button>
+        </div>
+
+        <!-- Card 3: Prioritas Mendesak (Featured Card) -->
+        <div class="tier-card featured-emergency">
+          <div class="tier-featured-tag">🔥 FAST TRACK EMERGENCY</div>
+          <h4>🔴 Mendesak / Darurat</h4>
+          <span class="tier-sla" style="color: #ef4444;">SLA: < 2 Jam (Respon Langsung)</span>
+          <ul class="tier-list">
+            <li><span>⚡</span> <strong>Bola lampu KBM mati total</strong></li>
+            <li><span>⚡</span> <strong>Kipas angin mati di cuaca panas</strong></li>
+            <li><span>⚡</span> <strong>Sekering konslet / berbau terbakar</strong></li>
+            <li><span>⚡</span> <strong>AC bocor / Proyektor mati saat ujian</strong></li>
+          </ul>
+          <button class="btn-pill btn-danger shimmer-btn" onclick="setQuickPriority('Mendesak')">
+            <span>Lapor Emergency via WA 🚨</span>
+          </button>
+        </div>
+
+        <!-- Card 4: Usulan Pengadaan -->
+        <div class="tier-card">
+          <h4>Usulan Baru</h4>
+          <span class="tier-sla">SLA: Evaluasi Semesteran</span>
+          <ul class="tier-list">
+            <li><span>✓</span> Usulan PC baru Lab Komputer</li>
+            <li><span>✓</span> Pengadaan proyektor tambahan</li>
+            <li><span>✓</span> Usulan pengadaan dana BOS</li>
+            <li><span>✓</span> Usulan sarana olahraga baru</li>
+          </ul>
+          <button class="btn-pill btn-outline-primary" onclick="showToast('Silakan ajukan via Form Usulan Sarpras Semesteran', 'info')">
+            <span>Ajukan Usulan Baru</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4-Step Process Timeline ("How To Book" Alur Pelaporan) -->
+  <section class="timeline-section" id="alur-lapor">
+    <div class="container">
+      <h2 class="section-title">Alur Cepat Pelaporan & Penanganan</h2>
+      <p class="section-subtitle">4 Langkah mudah bagi Wali Kelas dan Penanggung Jawab Ruangan</p>
+
+      <div class="timeline-grid">
+        <div class="step-card">
+          <div class="step-number-wrap">1</div>
+          <h4 class="step-title">Pilih Ruangan</h4>
+          <p class="step-desc">Wali Kelas memilih ruangan kelas atau laboratorium yang mengalami kendala teknis.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number-wrap">2</div>
+          <h4 class="step-title">Foto Kendala</h4>
+          <p class="step-desc">Ambil foto kerusakan langsung dari kamera smartphone (otomatis dikompresi ringan).</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number-wrap">3</div>
+          <h4 class="step-title">Kirim ke WhatsApp</h4>
+          <p class="step-desc">Sistem langsung membuka WhatsApp menuju nomor Teknisi Sarpras beserta nomor tiket resmi.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number-wrap">4</div>
+          <h4 class="step-title">Ruangan Nyaman</h4>
+          <p class="step-desc">Teknisi madrasah tiba membawa suku cadang pengganti. Belajar santri kembali nyaman.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Deep Blue Metric Counter Bar & Footer -->
+  <footer class="bottom-metric-bar">
+    <div class="container">
+      <div class="metric-bar-grid">
+        <div class="counters-row">
+          <div class="counter-item">
+            <span class="counter-num" id="cntSiswa">1.050+</span>
+            <span class="counter-label">Santri Putra & Putri</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-num" id="cntRuang">43</span>
+            <span class="counter-label">Ruangan Terkelola</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-num" id="cntKelas">30</span>
+            <span class="counter-label">Ruang Kelas Digital</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-num" id="cntRespon">&lt; 2 Jam</span>
+            <span class="counter-label">Respon Cepat Darurat</span>
+          </div>
+        </div>
+
+        <div class="quote-card">
+          <p class="quote-text">
+            "Kenyamanan fasilitas sarana prasarana adalah fondasi utama keberhasilan proses tarbiyah dan pembelajaran santri di Dayah/MTs Jeumala Amal."
+          </p>
+          <span class="quote-author">★ ★ ★ ★ ★ Kepala MTs Jeumala Amal</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom-line">
+        <span>© 2026 SIM-SARPRAS MTs Jeumala Amal Lueng Putu, Bandar Baru, Pidie Jaya, Aceh.</span>
+        <span>Didukung oleh Google Workspace Cloud & REST API.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================================
+       MODAL 1: AUTHENTICATION & ROLE GATEWAY
+       ========================================================================================= -->
+  <div class="modal-overlay" id="modalAuth">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="closeModal('modalAuth')">✕</button>
+      <div style="text-align: center; margin-bottom: 24px;">
+        <div style="font-size: 40px; margin-bottom: 8px;">🏫</div>
+        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--text-primary);">Masuk ke Portal Sarpras</h3>
+        <p style="font-size: 0.85rem; color: var(--text-secondary);">Silakan pilih hak akses sesuai peran Anda di madrasah</p>
+      </div>
+
+      <!-- Akses Cepat Wali Kelas / PJ Ruang via PIN -->
+      <form id="formLoginPJ">
+        <div class="form-field" style="margin-bottom: 14px;">
+          <label for="loginRuangSelect">Pilih Ruangan Tanggung Jawab</label>
+          <select id="loginRuangSelect" class="form-select" required>
+            <option value="">-- Pilih Ruang Anda (Kelas VII-1 s/d IX-10, Lab...) --</option>
+          </select>
+        </div>
+
+        <div class="form-field" style="margin-bottom: 18px;">
+          <label for="loginPinInput">PIN / Kode Akses Wali Kelas</label>
+          <input type="password" id="loginPinInput" class="form-input" placeholder="Masukkan 6 digit PIN (Default: 123456)" required>
+        </div>
+
+        <button type="submit" class="btn-pill btn-primary shimmer-btn" style="width: 100%; margin-bottom: 16px;">
+          <span>Masuk Sebagai Penanggung Jawab Ruangan 🔑</span>
+        </button>
+      </form>
+
+      <div style="text-align: center; margin: 16px 0; position: relative;">
+        <hr style="border: none; border-top: 1px solid var(--border-subtle);">
+        <span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: white; padding: 0 12px; font-size: 0.75rem; color: var(--text-muted); font-weight: 700;">ATAU AKSES PENGELOLA</span>
+      </div>
+
+      <!-- Akses Admin Sarpras -->
+      <form id="formLoginAdmin">
+        <div class="form-field" style="margin-bottom: 12px;">
+          <input type="text" id="adminUserInput" class="form-input" placeholder="Username / Email Admin (darurat / admin)">
+        </div>
+        <div class="form-field" style="margin-bottom: 16px;">
+          <input type="password" id="adminPassInput" class="form-input" placeholder="Kata Sandi Admin Sarpras">
+        </div>
+        <button type="submit" class="btn-pill btn-outline-primary" style="width: 100%;">
+          <span>Masuk Konsol Admin Sarpras ⚙️</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================================================
+       MODAL 2: INSPEKSI & CEKLIS OPNAME RUANGAN (Khusus Wali Kelas / PJ)
+       ========================================================================================= -->
+  <div class="modal-overlay" id="modalOpname">
+    <div class="modal-container modal-lg">
+      <button class="modal-close-btn" onclick="closeModal('modalOpname')">✕</button>
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 14px;">
+        <div>
+          <span class="hero-badge" id="opnameRuangBadge">RUANGAN KELAS</span>
+          <h3 style="font-size: 1.45rem; font-weight: 800;" id="opnameRuangTitle">Inventarisasi Ruangan</h3>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);" id="opnamePjInfo">Penanggung Jawab: -</p>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button class="btn-pill btn-outline-primary" id="btnCetakDIR">
+            <span>Pratinjau Lembar DIR (PDF) 📄</span>
+          </button>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; background: var(--surface-soft); padding: 12px 18px; border-radius: var(--radius-md);">
+        <div>
+          <span style="font-size: 0.85rem; font-weight: 700;">Daftar Aset di Ruangan Ini</span>
+          <div style="font-size: 0.78rem; color: var(--text-secondary);" id="opnameStatTotal">Total 0 Barang</div>
+        </div>
+        <button class="btn-pill btn-primary" style="padding: 6px 14px; font-size: 0.8rem;" onclick="simpanOpnameCepat()">
+          <span>✓ Verifikasi Semua Kondisi Baik</span>
+        </button>
+      </div>
+
+      <div id="opnameBarangList" style="max-height: 400px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px;">
+        <!-- Daftar barang per ruangan dimuat via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================================
+       MODAL 3: PRATINJAU RESMI DAFTAR INVENTARIS RUANG (DIR) UKURAN F4
+       ========================================================================================= -->
+  <div class="modal-overlay" id="modalDIR">
+    <div class="modal-container modal-lg" style="max-width: 900px; background: #f8fafc;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h4 style="font-weight: 800;">Pratinjau Dokumen Resmi DIR</h4>
+        <div style="display: flex; gap: 10px;">
+          <button class="btn-pill btn-primary" onclick="window.print()">
+            <span>Cetak / Simpan PDF 🖨️</span>
+          </button>
+          <button class="modal-close-btn" style="position: static;" onclick="closeModal('modalDIR')">✕</button>
+        </div>
+      </div>
+
+      <!-- Kertas F4 Realistis -->
+      <div class="dir-paper" id="dirPaperPrintArea">
+        <div class="dir-kop">
+          <h4 style="font-size: 14px; font-weight: bold; margin: 0;">YAYASAN KESEJAHTERAAN MASYARAKAT ACEH (YAKKMA)</h4>
+          <h3 style="font-size: 16px; font-weight: bold; margin: 2px 0;">MADRASAH TSANAWIYAH SWASTA JEUMALA AMAL</h3>
+          <p style="font-size: 11px; margin: 0;">Jalan Banda Aceh - Medan Km. 136 Lueng Putu, Bandar Baru, Kabupaten Pidie Jaya - Aceh (24184)</p>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 18px;">
+          <h4 style="font-size: 14px; font-weight: bold; text-decoration: underline; margin: 0;">DAFTAR INVENTARIS RUANG (DIR)</h4>
+          <span style="font-size: 11px;">Tahun Ajaran 2026/2027</span>
+        </div>
+
+        <table style="width: 100%; font-size: 12px; margin-bottom: 12px;">
+          <tr>
+            <td style="width: 20%; font-weight: bold;">Nama Ruangan</td>
+            <td style="width: 30%;" id="dirNamaRuang">: -</td>
+            <td style="width: 20%; font-weight: bold;">Gedung / Lokasi</td>
+            <td style="width: 30%;" id="dirLokasi">: -</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold;">Penanggung Jawab</td>
+            <td id="dirPjNama">: -</td>
+            <td style="font-weight: bold;">NIP / ID Pegawai</td>
+            <td id="dirPjNip">: -</td>
+          </tr>
+        </table>
+
+        <table class="dir-table" id="dirTableContent">
+          <thead>
+            <tr>
+              <th style="width: 30px;">No</th>
+              <th>Kode Barang</th>
+              <th>Nomor Inventaris</th>
+              <th>Nama Barang / Spesifikasi</th>
+              <th style="width: 40px;">Jml</th>
+              <th>Tahun</th>
+              <th>Sumber Dana</th>
+              <th style="width: 50px;">Kondisi</th>
+            </tr>
+          </thead>
+          <tbody id="dirTableBody">
+            <!-- Isi tabel dari JS -->
+          </tbody>
+        </table>
+
+        <!-- Tanda Tangan Resmi & QR Code HMAC -->
+        <table style="width: 100%; margin-top: 30px; font-size: 12px; text-align: center;">
+          <tr>
+            <td style="width: 40%;">
+              Mengetahui,<br>
+              Kepala MTs Jeumala Amal<br><br><br><br>
+              <strong><u>Drs. H. Muhammad Jafar, M.Ag</u></strong><br>
+              NIP. 197508122002121003
+            </td>
+            <td style="width: 20%;">
+              <div style="border: 1px dashed #64748b; padding: 6px; font-size: 9px; border-radius: 6px;">
+                <div style="font-size: 20px;">🛡️</div>
+                HMAC VERIFIED<br>
+                <span id="dirHmacCode">JA-SARPRAS-DIR</span>
+              </div>
+            </td>
+            <td style="width: 40%;">
+              Lueng Putu, 29 Oktober 2026<br>
+              Penanggung Jawab Ruangan,<br><br><br><br>
+              <strong id="dirSignPj"><u>-</u></strong><br>
+              Wali Kelas / Kepala Unit
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Box -->
+  <div class="toast-box" id="toastBox"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
